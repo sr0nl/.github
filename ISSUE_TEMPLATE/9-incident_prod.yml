@@ -1,0 +1,95 @@
+name: "🚨 Incident / Production Issue"
+description: "Track an outage, major incident, or service degradation"
+title: "[Incident][P1] "
+labels: ["incident"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For serious production/staging incidents. Timestamps and blast radius are the most useful details.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Severity"
+      description: "Best guess is fine"
+      options:
+        - "P0 - Site or core service down"
+        - "P1 - Major feature impacted"
+        - "P2 - Partial degradation / UX issue"
+        - "P3 - Minor"
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Impact"
+      description: "Who's affected, and how badly?"
+      placeholder: |
+        - Affected feature / area:
+        - Affected users / percentage:
+        - Business impact:
+    validations:
+      required: true
+
+  - type: input
+    id: start_time
+    attributes:
+      label: "Started at"
+      placeholder: "e.g. 2025-12-03 10:20 (UTC+8)"
+    validations:
+      required: true
+
+  - type: input
+    id: end_time
+    attributes:
+      label: "Ended at (or 'ongoing')"
+      placeholder: "e.g. ongoing / 2025-12-03 11:05"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detection
+    attributes:
+      label: "How was it caught?"
+      description: "Alert, monitoring, user report?"
+      placeholder: |
+        - Source (alert / support ticket / noticed internally):
+        - Metrics / screenshots:
+    validations:
+      required: false
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: "Mitigation so far"
+      description: "What's been done to stop the bleeding?"
+      placeholder: |
+        - Actions taken:
+        - Temporary workaround:
+    validations:
+      required: true
+
+  - type: textarea
+    id: next_steps
+    attributes:
+      label: "Follow-ups (optional)"
+      description: "List anything that needs an RCA or postmortem"
+      placeholder: |
+        - [ ] Find root cause
+        - [ ] Add monitoring / alerts
+        - [ ] Fix and regression-test
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs / links (optional)"
+      placeholder: |
+        - Logs:
+        - Dashboard:
+        - Related PRs / issues:
+    validations:
+      required: false

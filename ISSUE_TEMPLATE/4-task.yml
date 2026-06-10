@@ -1,0 +1,40 @@
+name: "🛠️ Task"
+description: "Track a concrete, doable piece of work"
+title: "[Task] "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For work that can be broken down and checked off.
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: "Why this matters"
+      description: "What's the point, and what gets better once it's done?"
+      placeholder: "e.g. Speed up data imports so nobody has to do them by hand (and mess them up)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: "Subtasks"
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes (optional)"
+      description: "Links, screenshots, gotchas"
+      value: |
+        - Related links:
+        - Things to watch out for:
+    validations:
+      required: false

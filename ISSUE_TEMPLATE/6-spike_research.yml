@@ -1,0 +1,64 @@
+name: "🔍 Spike / Research"
+description: "Explore or prototype before committing — for when the tech or requirements aren't clear yet"
+title: "[Spike] "
+labels: ["research"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For "figure it out first, decide later" work — PoCs, feasibility checks, pre-estimation research.
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: "What are we trying to answer?"
+      description: "The questions this spike should resolve"
+      placeholder: |
+        - Question to answer:
+        - Why it matters:
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Scope (including what's out)"
+      description: "What to dig into, and what to leave alone for now"
+      placeholder: |
+        - In scope:
+        - Out of scope:
+    validations:
+      required: false
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: "Approach / candidate options (optional)"
+      placeholder: |
+        - How:
+        - Options A/B/C:
+    validations:
+      required: false
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: "Deliverables / definition of done"
+      description: "When can we call this spike finished?"
+      placeholder: |
+        - Output (doc / PoC / conclusion / estimate):
+        - Done when:
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes (optional)"
+      description: "Links, references, risks"
+      placeholder: |
+        - References:
+        - Risks:
+    validations:
+      required: false

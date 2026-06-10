@@ -1,0 +1,51 @@
+name: "❓ Question / Support"
+description: "Stuck on something, or have a question that isn't a bug or feature request"
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write down everything you're seeing — the more context, the quicker the answer.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: "What's the question?"
+      description: "Where exactly are you stuck?"
+      placeholder: "e.g. Why is the GA import on staging missing a column?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Background"
+      description: "What you're working on and what you're trying to get done"
+      value: |
+        - I'm working on:
+        - Trying to:
+    validations:
+      required: false
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: "What you've tried"
+      description: "Saves everyone from retracing your steps"
+      value: |
+        - Tried:
+        - Result:
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Screenshots / logs / links (optional)"
+      placeholder: |
+        - Screenshot / recording:
+        - Console / API logs:
+        - Related links:
+    validations:
+      required: false

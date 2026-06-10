@@ -1,0 +1,52 @@
+name: "📚 Documentation"
+description: "Add, fix, or fill in docs (README / spec / API docs / runbooks)"
+title: "[Docs] "
+labels: ["docs"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write it down before it turns into folklore.
+
+  - type: textarea
+    id: location
+    attributes:
+      label: "Where does the doc live?"
+      value: |
+        - Link:
+        - Location (repo path / Notion / Drive):
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What's wrong or missing?"
+      placeholder: |
+        - Gap / error:
+        - Why it's a problem:
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_update
+    attributes:
+      label: "What should change?"
+      placeholder: |
+        - Add:
+        - Fix:
+        - Remove / update:
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: "References (optional)"
+      description: "Anything that helps with the writing"
+      placeholder: |
+        - Related issues / PRs:
+        - Screenshots / diagrams:
+        - Other links:
+    validations:
+      required: false

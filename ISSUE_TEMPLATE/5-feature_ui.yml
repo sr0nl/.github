@@ -1,0 +1,43 @@
+name: "🎨 UI / Style Tweak"
+description: "Layout, styling, or visual adjustments"
+title: "[UI] "
+labels: ["ui"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For layout, UI, and styling requests. Just the essentials is fine.
+
+  - type: textarea
+    id: request_desc
+    attributes:
+      label: "What needs adjusting?"
+      description: "What's off right now, and what direction should it go?"
+      value: |
+        - Current state / problem:
+        - Desired direction:
+        - Reference (if any):
+    validations:
+      required: true
+
+  - type: textarea
+    id: adjust_items
+    attributes:
+      label: "Checklist of changes"
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes (optional)"
+      description: "Screenshots, mocks, links"
+      value: |
+        - Current screenshot:
+        - Desired look / mock:
+        - Related links:
+    validations:
+      required: false

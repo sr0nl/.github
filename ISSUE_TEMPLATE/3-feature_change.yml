@@ -1,0 +1,67 @@
+name: "🔄 Feature Change"
+description: "Adjust how an existing feature works"
+title: "[Change] "
+labels: ["change"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For changes to the behavior, flow, or screens of something that already exists.
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: "Why change it?"
+      description: "The goal and a bit of background"
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: "Task checklist"
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: false
+
+  - type: textarea
+    id: feature_desc
+    attributes:
+      label: "How it works today"
+      description: "Current behavior and how it's used"
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected_output
+    attributes:
+      label: "What it should do after the change"
+    validations:
+      required: false
+
+  - type: textarea
+    id: before_screenshot
+    attributes:
+      label: "Current screen"
+      placeholder: "Drag images here or paste a link"
+    validations:
+      required: false
+
+  - type: textarea
+    id: after_screenshot
+    attributes:
+      label: "Expected screen after the change"
+      placeholder: "Drag images here or paste a link"
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes"
+      description: "Anything else worth mentioning, plus related links"
+    validations:
+      required: false

@@ -1,0 +1,43 @@
+name: "✨ New Feature"
+description: "Propose a brand-new feature, flow, or page"
+title: "[Feature] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For new features, flows, or pages. The user story and scope matter most — the rest is optional.
+
+  - type: textarea
+    id: user_scenario
+    attributes:
+      label: "Who needs this, and why?"
+      description: "Who uses it, in what situation, and what should it accomplish? Note what's in and out of scope to keep things from ballooning."
+      placeholder: |
+        As a ___
+        I want to ___
+        so that ___
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: "Task checklist"
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: false
+
+  - type: textarea
+    id: refs
+    attributes:
+      label: "Mocks / references (optional)"
+      description: "Wireframes, flow diagrams, or links if you have them"
+      value: |
+        - Mock / wireframe:
+        - Flow diagram:
+        - Related links:
+    validations:
+      required: false
